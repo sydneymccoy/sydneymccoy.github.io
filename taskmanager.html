@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Georgia, sans-serif;
+            padding: 20px;
+            background: #ceeafd;
+        }
+
+        .task-form {
+            background: rgb(161, 208, 247);
+            padding: 15px;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        #taskmanager {
+            margin-top: 20px;
+        }
+
+        .task {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #fff
+        }
+        label {
+            font-weight: bold;
+        }
+
+        .task.important {
+            border-left: 5px solid rgb(190, 42, 42);
+            background-color: #fc9b9b;
+        }
+
+        .task.completed {
+            text-decoration: line-through;
+            color: rgb(100, 100, 100);
+        }
+    </style>
+</head>
+<body>
+    <h1>⚝──⭒─⭑─ My Task Manager ─⭑─⭒──⚝</h1>
+    <div class="task-form">
+        <label>Task Name: <input type="text" id="taskName" placeholder="Enter task name"></label><br><br>
+        <label>Priority:   
+            <select name="priority" id="priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+        </label>
+        <label><input type="checkbox" id="isImportant"> Important</label><br><br><br>
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div id="taskmanager"></div>
+
+    <script src="tasks.js"></script>
+</body>
+</html>
